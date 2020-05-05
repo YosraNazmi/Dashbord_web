@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/Chart.js"></script>
+</head>
+<body>
+
+    <!---Header--->
+    <header class="navbar" >
+        
+        <div class="toggle-collapes" >
+            <div class="toggle-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+    
+        <a class="logo" href="index.html">
+            
+            <b>
+                <span>Dash</span>board 
+            </b>
+        </a>
+       
+
+        <div class="nav notify-row" id="top-menu">
+
+            <ul class="nav top-menu">
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle"><i class="fas fa-tasks"></i><span class="badge bg-theme">4</span></a>
+                    <ul class="dropdown-menu extended" id="mydropdown">
+                        <div class="notify-arrow notify-arrow-green"></div>
+                        <li>
+                            <p class="green">You have 4 pending tasks</p>
+                        </li>
+                        <li>
+                         <a href="">
+                             <div class="task-info">
+                                <div class="desc">admin panel</div>
+                                <div class="percent" >40%</div>
+                             </div>
+                             <div class="progress">
+                                 <div class="progress-bar progress-bar-sucsses" style="width: 40%;">
+
+                                 </div>
+                             </div>
+                         </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="task-info">
+                                    <div class="desc">admin panel</div>
+                                    <div class="percent" >40%</div>
+                                 </div>
+                                 <div class="progress">
+                                     <div class="progress-bar progress-bar-warning" style="width: 60%;">
+    
+                                     </div>
+                                 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="task-info">
+                                    <div class="desc">admin panel</div>
+                                    <div class="percent" >40%</div>
+                                 </div>
+                                 <div class="progress">
+                                     <div class="progress-bar progress-bar-info" style="width: 80%;">
+    
+                                     </div>
+                                 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="task-info">
+                                    <div class="desc">admin panel</div>
+                                    <div class="percent" >40%</div>
+                                 </div>
+                                 <div class="progress">
+                                     <div class="progress-bar progress-bar-danger" style="width: 70%;">
+    
+                                     </div>
+                                 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle"><i class="fas fa-envelope"></i><span class="badge bg-theme">5</span></a> 
+                    <ul class="dropdown-menu extended inbox">
+                        <div class="notify-arrow notify-arrow-green"></div>
+                        <li>
+                            <a href="">
+                                <span class="photo"><img src="./img/ui-zac.jpg" alt=""></span>
+                                <span class="subject">
+                                    <span class="from">Zac Snider</span>
+                                    <span class="time">Just Now</span>
+                                </span>
+                                <span class="message">Hi Mate, how is everything?</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="photo"><img src="./img/ui-divya.jpg" alt=""></span>
+                                <span class="subject">
+                                    <span class="from">Divan Snider</span>
+                                    <span class="time">4 mins</span>
+                                </span>
+                                <span class="message">Hi Mate, I need your help?</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="photo"><img src="./img/ui-sherman.jpg" alt=""></span>
+                                <span class="subject">
+                                    <span class="from">Sam Snider</span>
+                                    <span class="time">4 hrs</span>
+                                </span>
+                                <span class="message">It is done thank you?</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="photo"><img src="./img/ui-sam.jpg" alt=""></span>
+                                <span class="subject">
+                                    <span class="from">Sam Snider</span>
+                                    <span class="time">10 hrs</span>
+                                </span>
+                                <span class="message">please, answer?</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">See all messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle "><i class="fas fa-bell"></i><span class="badge bg-yel">7</span></a>
+                    <ul class="dropdown-menu extended ">
+                        <div class="notify-arrow notify-arrow-yellow"></div>
+                        <li>
+                            <p class="yellow">You have 7 new notifications</p>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-exclamation-triangle"  style="color: red;"></i>
+                                <span class="label "> Server Overloaded</span>
+                                <span class="small italic">4 mins.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-bell" style="color: yellow;"></i>
+                                <span class="label "> Server Overloaded</span>
+                                <span class="small italic">4 mins.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-exclamation-triangle" style="color: red;"></i>
+                                <span class="label "> Server Overloaded</span>
+                                <span class="small italic">4 mins.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-plus-square" style="color: green;"></i>
+                                <span class="label "> Server Overloaded</span>
+                                <span class="small italic">4 mins.</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">See all Notifications</a>
+                        </li>
+                    </ul>
+                </li>   
+            </ul>
+        </div>
+
+        <div class="top-menu">
+           <ul class="nav right top-menu">
+               <li>
+                   <a class="logout" href="">Logout</a>
+               </li>
+           </ul> 
+        </div>
+
+       
+    </header>
+    <!--xheaderx-->
+
+    <!---Aside--->
+    <aside class="aside">
+        <div class="nav-colapes" id="sidebar" style="overflow: hidden; outline: none; margin-left: 0px;">
+            <ul class="sidebar-menu">
+                <p class="centered">
+                    <a href="">
+                        <img src="./img/ui-danro.jpg" alt="" class="img-circle">
+                    </a>
+                    <h5 class="centered">Dan Soffes</h5>
+                </p>
+
+                <li class="main">
+                    <a href="index.html" class="active"><i class="fas fa-tachometer-alt"></i><span>&nbsp; Dashboard</span></a>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="parent">
+                        <i class="fa fa-desktop"></i>
+                        <span >UI Elements</span> </a>
+                        <ul class="sub" style="display: none;">
+                            <li class="active">
+                                <a href="">General</a>
+                            </li>
+                            <li>
+                                <a href="">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="panels.html">Panels</a>
+                            </li>
+                        </ul>
+                   
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="parent">
+                        <i class="fa fa-cogs"></i>
+                        <span>Components</span>
+                    </a>
+                    <ul class="sub" style="display: none;">
+                        <li class="active">
+                            <a href="">Grids</a>
+                        </li>
+                        <li>
+                            <a href="calender.html">Calender</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="todolist.html">To Do List</a>
+                        </li>
+                        <li>
+                            <a href="dropzone.html">Dropzone File uploade</a>
+                        </li>
+                        <li>
+                            <a href="">Inline Editor</a>
+                        </li>
+                        <li>
+                            <a href="multiplefileeditor.html">Multiple File Editor</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="parent">
+                        <i class="fa fa-book"></i>
+                        <span>Extra Pages</span>
+                    </a>
+                    <ul class="sub" style="display: none;">
+                        <li class="active">
+                            <a href="">Blank Page</a>
+                        </li>
+                        <li>
+                            <a href="">Login</a>
+                        </li>
+                        <li>
+                            <a href="">Lock Screen</a>
+                        </li>
+                        <li>
+                            <a href="">Profiles</a>
+                        </li>
+                        <li>
+                            <a href="">Invoice</a>
+                        </li>
+                        <li>
+                            <a href="">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="">FAQ</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="parent">
+                        <i class="fa fa-tasks"></i>
+                        <span>Forms</span>
+                    </a>
+                    <ul class="sub" style="display: none;">
+                        <li class="active">
+                            <a href="">Form Components</a>
+                        </li>
+                        <li>
+                            <a href="">Advanced Components</a>
+                        </li>
+                        <li>
+                            <a href="">Form Validation</a>
+                        </li>
+                        <li>
+                            <a href="">Contact Form</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="parent">
+                        <i class="fa fa-th"></i>
+                        <span>Data Tables</span>
+                    </a>
+                    <ul class="sub" style="display: none;">
+                        <li class="active">
+                            <a href="">Basic Table</a>
+                        </li>
+                        <li>
+                            <a href="">Responsive Table</a>
+                        </li>
+                        <li>
+                            <a href="">Advanced Table</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="parent">
+                        <i class="fa fa-envelope"></i>
+                        <span>Mail</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="parent">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Charts</span>
+                    </a>
+                    <ul class="sub" style="display: none;">
+                        <li class="active">
+                            <a href="">Morries</a>
+                        </li>
+                        <li>
+                            <a href="">Chartjs</a>
+                        </li>
+                        <li>
+                            <a href="">Flot Charts</a>
+                        </li>
+                        <li>
+                            <a href="">Xcharts</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="parent">
+                        <i class="fa fa-comments"></i>
+                        <span>Chat ROOM</span>
+                    </a>
+                    <ul class="sub" style="display: none;">
+                        <li class="active">
+                            <a href="">Lobby</a>
+                        </li>
+                        <li>
+                            <a href="">Chat Room</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="" class="parent">
+                        <i class="fa fa-map-marker"></i>
+                        <span>Google Map</span>
+                    </a>
+                </li>
+                
+            </ul>
+
+        </div>
+    </aside>
+    <!--xAsidex-->
+
+    <!---Content--->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+
+                <!-----Main Content---->
+                <div class="col-lg-9 main-chart">
+                    <div class="border-head">
+                        <h3>USER VISITS</h3>
+                    </div>
+                    <div class="custom-bar-chart">
+                        <ul class="y-axis">
+                            <li>
+                                <span>10.000</span>
+                            </li>
+                            <li>
+                                <span>8.000</span>
+                            </li>
+                            <li>
+                                <span>6.000</span>
+                            </li>
+                            <li>
+                                <span>4.000</span>
+                            </li>
+                            <li>
+                                <span>2.000</span>
+                            </li>
+                            <li>
+                                <span>0</span>
+                            </li>
+                        </ul>
+                        <div class="bar">
+                            <div class="title">
+                                JAN
+                            </div>
+                            <div class="value tooltip" style="height: 85%;">
+        
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="title">
+                                FEB
+                            </div>
+                            <div class="value tooltip" style="height: 50%;">
+        
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="title">
+                                MAR
+                            </div>
+                            <div class="value tooltip" style="height: 60%;">
+        
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="title">
+                                APR
+                            </div>
+                            <div class="value tooltip" style="height: 45%;">
+        
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="title">
+                                MAY
+                            </div>
+                            <div class="value tooltip" style="height: 32%;">
+        
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="title">
+                                JUN
+                            </div>
+                            <div class="value tooltip" style="height: 62%;">
+        
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="title">
+                                JUL
+                            </div>
+                            <div class="value tooltip" style="height: 75%;">
+        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mtt">
+
+                        <div class="col-md-4 col-sm-4 mb">
+                            <div class="grey-panel pn donut-chart">
+                              <div class="grey-header">
+                                <h5>SERVER LOAD</h5>
+                              </div>
+                              <canvas id="serverstatus01" height="120" width="120"></canvas>
+                              <script>
+                                var doughnutData = [{
+                                    value: 70,
+                                    color: "#FF6B6B"
+                                  },
+                                  {
+                                    value: 30,
+                                    color: "#fdfdfd"
+                                  }
+                                ];
+                                var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
+                              </script>
+                              <div class="row">
+                                <div class="col-sm-6 col-xs-6 goleft">
+                                  <p>Usage<br/>Increase:</p>
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                  <h2>21%</h2>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- /grey-panel -->
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 mb">
+                            <div class="darkblue-panel pn">
+                                <div class="darkblue-header">
+                                    <h5>DROPBOX STATICS</h5>
+                                </div>
+                                <canvas id="serverstatus02" height="120" width="120"></canvas>
+                                <script>
+                                    
+                                    var doughnutData = [{
+                                        value: 60,
+                                        color: "#1c9ca7"
+                                    },
+                                    {
+                                        value: 40,
+                                        color: "#f68275"
+                                    }
+                                    ];
+                                    var myDoughnut = new Chart(document.getElementById("serverstatus02").getContext("2d")).Doughnut(doughnutData);
+                                
+                                </script>
+                                <p> April 17, 2014</p>
+                                <footer>
+                                    <div class="pull-left">
+                                      <h5><i class="fa fa-hdd"></i> 17 GB</h5>
+                                    </div>
+                                    <div class="pull-right">
+                                      <h5>60% Used</h5>
+                                    </div>
+                                  </footer>
+                            </div>
+                                
+                        </div>
+                        <div class="col-md-4 col-sm-4 mb">
+                            <div class="green-panel pn">
+                                <div class="green-header">
+                                    <h5>REVENUE</h5>
+                                </div>
+                                <canvas id="serverstatus03" height="120" width="120"></canvas>
+                                <script>
+                                    
+                                    var doughnutData = [{
+                                        value: 90,
+                                        color: "#ff8800"
+                                    },
+                                    {
+                                        value: 10,
+                                        color: "#ffff"
+                                    }
+                                    ];
+                                    var myDoughnut = new Chart(document.getElementById("serverstatus03").getContext("2d")).Doughnut(doughnutData);
+                                
+                                </script>
+                                <p class="mt">
+                                    <b>$ 17,980</b>
+                                    <br>
+                                    Month Income
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 mb">
+                            <div class="twitter-panel pn">
+                                <i class="fab fa-twitter fa-4x" style="color: #f5f5f5; margin-top: 40px;"></i>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, nostrum.</p>
+                                <p class="user">@alverz_is</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb">
+                            <div class="white-panel pn">
+                                <div class="white-header">
+                                    <h5>TOP USER</h5>
+                                </div>
+                                <p>
+                                    <img src="./img/ui-zac.jpg" alt="" class="immg-circle">
+                                </p>
+                                <p>
+                                    <b>Zac Sinder</b>
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="small mt">MEMBER SINCE</p>
+                                        <p>2012</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="small mt">TOTAL SPEND</p>
+                                        <p>$ 47,60</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb">
+                            <div class="instagram-panel pn">
+                                <i class="fab fa-instagram fa-4x"  style="color: #f5f5f5; margin-top: 40px;"></i>
+                                <p>@THISISYOU
+                                    <br>
+                                5 min ago
+                                </p>
+                                <p>
+                                    <i class="fab fa-comment" style="color: #f5f5f5; margin-top: 35px;">18 |</i>
+                                    <i class="fas fa-user" style="color: #f5f5f5; margin-top: 45px;">49</i>
+                                    
+                                </p>
+                                
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                 <!--x-Main Content-x-->
+
+                <!----Right Sidebar---->
+                <div class="col-lg-3 ds">
+                    <div class="donut-main">
+                        <h4>Compeleted Action & Progress</h4>
+                        <canvas id="newchart" height="130" width="130" style="width: 130px; height: 130px;"></canvas>
+                        <script>
+                            
+                            var doughnutData = [{
+                                value: 70,
+                                color: "#4ECDC4"
+                            },
+                            {
+                                value: 30,
+                                color: "#fdfdfd"
+                            }
+                            ];
+                            var myDoughnut = new Chart(document.getElementById("newchart").getContext("2d")).Doughnut(doughnutData);
+                
+                        </script>
+
+
+                    </div>
+                    <div class="panel terques-chart">
+                        <div class="panel-body">
+                            <div class="chart">
+                                <div class="centered">
+                                    <span>TODAY EARNINGS</span>
+                                    <strong>$890,00 | 15%</strong>
+                                </div>
+                                <br>
+                                <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,564,455]"><canvas width="201" height="75" style="display: inline-block; width: 201px; height: 75px; vertical-align: top;"></canvas></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="centered mt">RECENT ACTIVITY</h4>
+                    <div class="desc">
+                        <div class="thumb">
+                            <span class="badge bg-theme">
+                                <i class="fa fa-clock"></i>
+                            </span>
+                        </div>
+                        <div class="details">
+                            <p>
+                                <muted>Just Now</muted>
+                                <br>
+                                <a href="">Poul Ruda</a>
+                                purchased an item.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="thumb">
+                            <span class="badge bg-theme">
+                                <i class="fa fa-clock"></i>
+                            </span>
+                        </div>
+                        <div class="details">
+                            <p>
+                                <muted>2 minutes ago</muted>
+                                <br>
+                                <a href="">James Brown</a>
+                                purchased an item.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="thumb">
+                            <span class="badge bg-theme">
+                                <i class="fa fa-clock"></i>
+                            </span>
+                        </div>
+                        <div class="details">
+                            <p>
+                                <muted>7 minutes ago</muted>
+                                <br>
+                                <a href="">Dlana Kenny</a>
+                                purchased an item.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="thumb">
+                            <span class="badge bg-theme">
+                                <i class="fa fa-clock"></i>
+                            </span>
+                        </div>
+                        <div class="details">
+                            <p>
+                                <muted>7 hours ago</muted>
+                                <br>
+                                <a href="">Branda page</a>
+                                purchased an item.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h4 class="centered mt">TEAM MEMBER ONLINE</h4>
+                    <div class="desc">
+                        <div class="thumb">
+                            <img src="./img/ui-divya.jpg" alt="" class="imgg-circle">
+                        </div>
+                        <div class="details">
+                            <p>
+                                <a href="">Diviya</a>
+                                <br>
+                                <muted>Available</muted>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="thumb">
+                            <img src="./img/ui-danro.jpg" alt="" class="imgg-circle">
+                        </div>
+                        <div class="details">
+                            <p>
+                                <a href="">Danro</a>
+                                <br>
+                                <muted>Busy</muted>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="thumb">
+                            <img src="./img/ui-sam.jpg" alt="" class="imgg-circle">
+                        </div>
+                        <div class="details">
+                            <p>
+                                <a href="">Sam</a>
+                                <br>
+                                <muted>Available </muted>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="thumb">
+                            <img src="./img/ui-divya.jpg" alt="" class="imgg-circle">
+                        </div>
+                        <div class="details">
+                            <p>
+                                <a href="">Diviya</a>
+                                <br>
+                                <muted>Available</muted>
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+                <!--x-Right Sidebar-x-->
+            </div>
+        </section>
+    </section>
+    <!--xContentx-->
+
+    <!---Footer--->
+    <footer class="site-footer">
+        <div class="text-center">
+            <p>@copyrights
+                <strong>Yosra</strong>
+                .All Rights Reserved
+            </p>
+            <div class="credits">
+                Here it is
+            </div>
+            <a href="index.html" class="go-top">
+                <i class="fa fa-angle-up" style="color: #2A3542; margin-top: 3px;"></i>
+            </a>
+        </div>
+    </footer>
+    <!--xFooterx-->
+    
+    
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.sparkline.js"></script>
+    <script src="./js/all.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
+    
+    
+
+</body>
+</html>
